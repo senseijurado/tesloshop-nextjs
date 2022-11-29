@@ -30,7 +30,7 @@ export interface iSeedUsuarios {
 	email: string | Function;
 	passcode: string | Function;
 	role: string | Function;
-	uid: string | Function;
+	uid?: string | Function;
 }
 
 export interface SeedData {
@@ -39,19 +39,23 @@ export interface SeedData {
 }
 
 export const initialData: SeedData = {
-	users: [],
-	products: [
-		{
-			description: faker.commerce.productDescription(),
-			images: [faker.image.image(), faker.image.imageUrl()],
-			inStock: faker.datatype.number(),
-			price: currencyFormat(faker.commerce.price(), 3),
-			sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
-			slug: slugify(faker.datatype.string()),
-			type: faker.definitions.commerce?.department!,
-			tags: faker.helpers.arrayElements(),
-			title: faker.commerce.productName(),
-			gender: faker.definitions.name?.gender!,
-		},
-	],
+	users: Array(3).fill({
+		name: '',
+		email: '',
+		passcode: '',
+		role: '',
+		uid: '',
+	}),
+	products: Array(52).fill({
+		description: faker.commerce.productDescription(),
+		images: [faker.image.image(), faker.image.imageUrl()],
+		inStock: faker.datatype.number(),
+		price: currencyFormat(faker.commerce.price(), 3),
+		sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
+		slug: slugify(faker.datatype.string()),
+		type: faker.definitions.commerce?.department!,
+		tags: faker.helpers.arrayElements(),
+		title: faker.commerce.productName(),
+		gender: faker.definitions.name?.gender!,
+	}),
 };
