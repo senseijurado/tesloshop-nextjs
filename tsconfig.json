@@ -17,17 +17,17 @@
         "downlevelIteration": true,
         "baseUrl": ".",
         "paths": {
-            "@api/*": "/api/*",
-            "@components/*": "/components/*",
-            "@context/*": "/context/*",
-            "@database/*": "/database/*",
-            "@helpers/*": "/helpers/*",
-            "@hooks/*": "/hooks/*",
-            "@interfaces/*": "/interfaces/*",
-            "@models/*": "/models/*",
-            "@pages/*": "/pages/*",
-            "@public/*": "/public/*",
-            "@styles/*": "/styles/*"
+            "@api/*": ["./api/*"],
+            "@components/*": ["./components/*"],
+            "@context/*": ["./context/*"],
+            "@database/*": ["./database/*"],
+            "@helpers/*":  ["./helpers/*"],
+            "@hooks/*": ["./hooks/*"],
+            "@interfaces/*": ["./interfaces/*"],
+            "@models/*": ["./models/*"],
+            "@pages/*":  ["./pages/*"],
+            "@public/*": ["./public/*"],
+            "@styles/*": ["./styles/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
