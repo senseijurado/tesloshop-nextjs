@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { currencyFormat, slugify } from '../helpers';
+import { currencyFormat, slugify } from '../utils';
 
 export type validProductSizes =
 	| 'XS'
