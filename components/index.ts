@@ -1,1 +1,1 @@
-// export * from './cart';
+export default console.log('Components index.ts');
