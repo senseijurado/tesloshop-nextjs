@@ -74,12 +74,12 @@ export function currencyPriceWithFees(
  * @param date - The date to format.
  * @returns A string with the date in the format: day, month, year.
  */
-export function formatDateTime(date = Date.now()): string | void {
-	return new Intl.DateTimeFormat('es-ES', {
+export function formatDateTime(date: Date | string): string | Date | void {
+	return new Date(date).toLocaleDateString('en-US', {
 		day: '2-digit',
 		month: 'long',
 		year: 'numeric',
-	}).format(date);
+	});
 }
 
 /**
