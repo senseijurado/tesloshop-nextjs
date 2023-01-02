@@ -1,6 +1,6 @@
 {
-  "name": "bubukishop",
-  "version": "1.0.5",
+  "name": "tesloshop",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
