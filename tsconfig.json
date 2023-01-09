@@ -22,7 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@api/*": [
-        "./api/*"
+        "server/*"
       ],
       "@components/*": [
         "./components/*"
